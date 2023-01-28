@@ -1,0 +1,79 @@
+.bonsai{
+	cursor: default;
+	&__bg{
+		position: absolute;
+		width: 900px;
+		height: 688px;
+		background-color: #F2FAFF;
+		border-radius: 94px;
+		top: 200px;
+    	left: -900px;
+		transform: rotate(-25.61deg);
+		z-index: -1;
+	}
+	border-top: 1px solid transparent;
+	&__inner{
+		margin: 44px 0;
+		position: relative;
+	}
+	&__title{
+		text-align: center;
+		margin-bottom: 35px;
+	}
+	&__text{
+		max-width: 673px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	&__columns{
+		margin-top: 70px;
+		display: flex;
+		@media (max-width: 950px) {
+			flex-direction: column;
+		}
+	}
+	&__column{
+		flex: 1 1 50%;
+		margin: 10px 0;
+		&-title{
+			@include fontText(Rubik, 23px, 700);
+			line-height: 28 / 23 * 100%;
+			color: #4C4D5F;
+			text-align: center;
+			margin-bottom: 45px;
+		}
+		&-icon{
+			text-align: center;
+		}
+		&-icon img{
+			height: 50px;
+			width: auto;
+			margin-bottom: 16px;
+		}
+		&-icon span{
+			@include fontText(Rubik, 16px, 400);
+			line-height: 19 / 16 * 100%;
+			color: #4C4D5F;
+			display: block;
+		}
+		&-icons{
+			margin: 0 auto;
+			max-width: 456px;
+			height: 330px;
+			display: grid;
+			grid-template-columns: 33.333% 33.333% 33.333%;
+		}
+		&-img{
+			max-width: 408px;
+			max-height: 352px;
+			margin: 0 auto;
+			& img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		&-bg{
+			background: url(../img/bonsai/stroke-124.png) no-repeat 50%;
+		}
+	}
+}

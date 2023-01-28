@@ -1,0 +1,56 @@
+.header{
+	&__bg{
+		position: absolute;
+		width: 1647px;
+		height: 1575px;
+		background-color: #F2FAFF;
+		border-radius: 94px;
+		transform: rotate(-25.61deg);
+		z-index: -1;
+		top: -1280px;
+    	left: 20px;
+	}
+	&__inner{
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		max-width: $md1 + px;
+		margin: 25px auto;
+		justify-content: center;
+	}
+	&__nav{
+		align-self: center;
+		padding-right: 20px; 
+		margin: 10px 0;
+		&-item{
+			position: relative;
+		}
+		&-list{
+			display: flex;
+			@include fontText(Roboto, 17px, 400);
+			line-height: 22 / 17 * 100%;
+			& a{
+				color: #4C4D5F;
+				transition: color 0.3s ease 0s;
+				@media (min-width: $md2 + px) {
+					&:hover {
+						color: #F53838;
+					}
+				}
+			}
+		}
+	}
+	&__logo{
+		flex: 1 1 auto;
+		padding: 0 20px;
+		margin: 10px 0;
+	}
+	&__button{
+		padding: 0 20px;
+		margin: 10px 0;
+		display: flex;
+	}
+	&__btn{
+		margin-left: 16px;
+	}
+}

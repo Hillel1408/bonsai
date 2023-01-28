@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import "mixins";
+@import "fonts";
+@import "icons";
+
+$minWidth: 320px;
+$maxWidth: 1440;
+$maxWidthContainer: 1180;
+$md1: $maxWidthContainer + 40;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 575.98;
+
+$fontFamily: "Roboto";
+
+@import "null";
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px) {
+		max-width: none;
+		padding: 0 20px;
+	}
+}
+body.lock{
+	overflow: hidden !important;
+}
+._logo{
+	color: #00B289;
+	font-size: 30px;
+	transition: color 0.3s ease 0s;
+	@media (min-width: $md2 + px) {
+		&:hover {
+			color: #F53838;
+		}
+	}
+}
+.btn{
+	@include fontText(Rubik, 13px, 700);
+	line-height: 16 / 13 * 100%;
+	color: #00B289;
+	border: 1px solid #00B289;
+	box-sizing: border-box;
+	height: 39px;
+	padding: 0 23px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+	border-radius: 4px;
+	text-transform: uppercase;
+	background-color: transparent;
+	@media (min-width: $md2 + px) {
+		&:hover {
+			background-color: #F53838;
+			color: white;
+			border: 1px solid #F53838;
+		}
+	}
+	&_green{
+		color: white;
+		background-color: #00B289;
+	}
+}
+.title{
+	font-weight: 400;
+	@include adaptiv-font(43, 28, 1);
+	line-height: 44 / 43 * 100%;
+	color: #4C4D5F;
+}
+.text{
+	@include fontText(Rubik, 24px, 400);
+	line-height: 32 / 24 * 100%;
+	color: rgba(76, 77, 95, 0.66);
+}
+.lb {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.inp {
+    display: block;
+    border: 1px solid #c9c9c9;
+    width: 100%;
+    border-radius: 5px;
+    height: 50px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 137.5%;
+    color: black;
+}
+
+@import "./sections/header";
+@import "./sections/intro";
+@import "./sections/bonsai";
+@import "./sections/work";
+@import "./sections/freelancers";
+@import "./sections/reviews";
+@import "./sections/start-free";
+@import "./sections/footer";
+@import "./sections/modal";

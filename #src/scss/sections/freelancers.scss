@@ -1,0 +1,66 @@
+.freelancers{
+	cursor: default;
+	border-top: 1px solid transparent;
+	&__inner{
+		margin: 100px 0;
+	}
+	&__title{
+		text-align: center;
+		margin-bottom: 48px;
+	}
+	&__text{
+		max-width: 680px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 85px;
+	}
+	&__columns{
+		display: flex;
+		@media (max-width: $md4 + px) {
+			flex-direction: column;
+			text-align: center;
+		}
+		& div:first-child div{
+			margin-left: auto;
+			margin-right: 40px;
+			&::before{
+				content: url("../img/freelancers/icon-18.png");
+				display: block;
+				margin-bottom: 30px;
+			}
+			@media (max-width: $md4 + px) {
+				margin-right: auto;
+				margin-bottom: 50px;
+			}
+		}
+		& div:last-child div{
+			margin-right: auto;
+			margin-left: 40px;
+			&::before{
+				content: url("../img/freelancers/icon-19.png");
+				display: block;
+				margin-bottom: 30px;
+			}
+			@media (max-width: $md4 + px) {
+				margin-left: auto;
+			}
+		}
+	}
+	&__column{
+		flex: 1 1 50%;
+		&-content{
+			max-width: 310px;
+		}
+		&-title{
+			@include fontText(Rubik, 23px, 700);
+			line-height: 32 / 23 * 100%;
+			color: #4C4D5F;
+			margin-bottom: 14px;
+		}
+		&-text{
+			@include fontText(Rubik, 17px, 400);
+			line-height: 25 / 17 * 100%;
+			color: rgba(76, 77, 95, 0.61);
+		}
+	}
+}

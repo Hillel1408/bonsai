@@ -1,0 +1,41 @@
+.start-free{
+	border-top: 1px solid transparent;
+	cursor: default;
+	&__form{
+		margin: 50px auto;
+		max-width: 1066px;
+		display: flex;
+		padding: 105px 70px;
+		background-color: #F2FAFF;
+		border-radius: 8px;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: $md3 + px) {
+			flex-direction: column;
+			padding: 55px 20px;
+			text-align: center;
+		}
+		&-text{
+			@include adaptiv-font(42, 27, 1);
+			font-weight: 400;
+			line-height: 62 / 42 * 100%;
+			color: #4C4D5F;
+			max-width: 486px;
+			margin-right: 20px;
+			& span{
+				color: #01B289;
+			}
+			@media (max-width: $md3 + px) {
+				max-width: none;
+				margin: 0 auto;
+				margin-bottom: 20px;
+			}
+		}
+		&-btn{
+			background-color: #00B289;
+			color: white;
+			height: 64px;
+			min-width: 195px;
+		}
+	}
+}
